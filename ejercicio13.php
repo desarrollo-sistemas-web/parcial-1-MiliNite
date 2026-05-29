@@ -6,6 +6,12 @@
 
 // Pista: Puedes usar la función strlen para obtener la longitud de una cadena. Por ejemplo, strlen("Hola") devolvería el valor 4. Un string puede ser recorrido como un arreglo de caracteres, por lo que puedes usar un bucle para iterar sobre cada carácter de la cadena y contar las coincidencias.
 
-function contarCaracteres($cadena, $caracter) {
-    // Tu código aquí
-}
+function contarCaracteres($cadena, $caracter){
+    $contador=0;
+    for ($i=0; $i < strlen($cadena); $i++){
+        if ($cadena[$i] === $caracter){
+            $contador++;
+        }
+    }
+    return $contador;
+} 

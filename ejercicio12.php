@@ -6,5 +6,9 @@
 
 
 function calcularFactorial($numero) {
-    // Tu código aquí
+    $factorial=1;
+    for ($i=1; $i <= $numero; $i++) {
+        $factorial *= $i;
+    }
+    return $factorial;
 }

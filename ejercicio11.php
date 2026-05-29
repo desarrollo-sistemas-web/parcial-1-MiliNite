@@ -6,6 +6,9 @@
 //Pista: Puedes usar la función strlen para obtener la longitud de una cadena. Por ejemplo, strlen("Hola") devolvería el valor 4.
 
 function invertirCadena($cadena) {
-    // Tu código aquí
-
+    $invertida = "";
+    for ($i = strlen($cadena) - 1; $i >= 0; $i--) {
+        $invertida .= $cadena[$i];
+    }
+    return $invertida;
 }
