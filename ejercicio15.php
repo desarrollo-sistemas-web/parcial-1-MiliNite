@@ -5,6 +5,7 @@
 
 //Pista: Puedes usar la función array_intersect y explode para dividir una cadena en un arreglo de cadenas. Por ejemplo, explode("Hola mundo", " ") devolvería el arreglo ["Hola", "mundo"].
 
-function encontrarPalabras($cadena, $palabras) {
-    //Tu código aquí
+function encontrarPalabras($cadena, $palabras){
+    $texto=explode(" ", $cadena);
+    return array_values(array_intersect($texto, $palabras));
 }

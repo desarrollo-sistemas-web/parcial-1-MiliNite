@@ -23,6 +23,17 @@
  // SI HACES ESTE EJERCICIO, NO HACE FALTA QUE HAGAS LOS DEMAS; VALE POR DIEZ. 🌟
 
 
-function validarTarjeta($numeroTarjeta) {
-
+function validarTarjeta($numeroTarjeta){
+    $suma=0;
+    for ($i=0; $i < strlen($numeroTarjeta); $i++){
+        $numero = $numeroTarjeta[$i];
+        if (($i + 1) % 2 !=0) {
+            $numero = $numero * 2;
+            if ($numero >=10){
+                $numero = 1 + ($numero - 10);
+            }
+        }
+        $suma += $numero;
+    }
+    return $suma % 10 == 0;
 }
